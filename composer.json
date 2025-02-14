@@ -1,0 +1,28 @@
+{
+    "name": "smit-backend/headless-cms-sync",
+    "description": "Real-time headless CMS content synchronization engine transforming publish webhooks into local Redis and SQLite read-model snapshots.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smit-backend",
+            "email": "sync2sale@gmail.com",
+            "homepage": "https://github.com/smit-backend"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmitBackend\\CmsRelay\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmitBackend\\CmsRelay\\PackageServiceProvider"
+            ]
+        }
+    }
+}
